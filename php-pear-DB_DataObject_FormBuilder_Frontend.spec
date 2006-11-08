@@ -17,14 +17,16 @@ BuildRequires:	php-pear-PEAR >= 1:1.4.9
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-DB_DataObject_FormBuilder >= 1.0.0RC5
-Requires:	php-pear-Structures_Datagrid >= 0.7.1
 Requires:	php-pear-HTML_Table >= 1.7.3
 Requires:	php-pear-PEAR-core >= 1:1.4.9
+Requires:	php-pear-Structures_Datagrid >= 0.7.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This package gives a working framework for a DB data editor with automatic link support and super-extensibility through DB_DataObject and DB_DataObject_FormBuilder.
+This package gives a working framework for a DB data editor with
+automatic link support and super-extensibility through DB_DataObject
+and DB_DataObject_FormBuilder.
 
 In PEAR status of this package is: %{_status}.
 
