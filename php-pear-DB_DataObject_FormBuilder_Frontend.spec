@@ -7,7 +7,7 @@
 Summary:	%{_pearname} - A frontend for data editing, inserting, and deleting based on DB_DataObject_FormBuilder and Structures_DataGrid
 Name:		php-pear-%{_pearname}
 Version:	0.7.0
-Release:	0.2
+Release:	0.5
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pearified.com/get/%{_pearname}-%{version}.tgz
@@ -16,10 +16,10 @@ URL:		http://pearified.com/package/DB_DataObject_FormBuilder_Frontend/
 BuildRequires:	php-pear-PEAR >= 1:1.4.9
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
-Requires:	php-pear-DB_DataObject_FormBuilder >= 1.0.0RC5
+Requires:	php-pear-DB_DataObject_FormBuilder >= 1.0.0-2.RC5
 Requires:	php-pear-HTML_Table >= 1.7.3
 Requires:	php-pear-PEAR-core >= 1:1.4.9
-Requires:	php-pear-Structures_Datagrid >= 0.7.1
+Requires:	php-pear-Structures_DataGrid >= 0.7.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,8 +46,10 @@ Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
-mv ./%{php_pear_dir}/{Pearified/DB,DB}
 rm -f docs/%{_pearname}/docs/LGPL.txt
+
+mv ./%{php_pear_dir}/{Pearified/DB,DB}
+grep -rl Pearified/DB/DataObject/ . | xargs %{__sed} -i -e 's,Pearified/DB/DataObject/,DB/DataObject/,'
 
 %install
 rm -rf $RPM_BUILD_ROOT
