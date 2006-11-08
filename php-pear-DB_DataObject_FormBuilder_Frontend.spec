@@ -7,7 +7,7 @@
 Summary:	%{_pearname} - A frontend for data editing, inserting, and deleting based on DB_DataObject_FormBuilder and Structures_DataGrid
 Name:		php-pear-%{_pearname}
 Version:	0.7.0
-Release:	0.1
+Release:	0.2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pearified.com/get/%{_pearname}-%{version}.tgz
@@ -46,6 +46,7 @@ Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
+mv ./%{php_pear_dir}/{Pearified/DB,DB}
 rm -f docs/%{_pearname}/docs/LGPL.txt
 
 %install
@@ -60,13 +61,13 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %doc docs/%{_pearname}/docs/*
-%{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/Pearified/DB/DataObject/FormBuilder/Frontend/AddRecord.php
-%{php_pear_dir}/Pearified/DB/DataObject/FormBuilder/Frontend/ChooseTable.php
-%{php_pear_dir}/Pearified/DB/DataObject/FormBuilder/Frontend/Controller.php
-%{php_pear_dir}/Pearified/DB/DataObject/FormBuilder/Frontend/DeleteRecords.php
-%{php_pear_dir}/Pearified/DB/DataObject/FormBuilder/Frontend/EditRecord.php
-%{php_pear_dir}/Pearified/DB/DataObject/FormBuilder/Frontend/LimitColumn.php
-%{php_pear_dir}/Pearified/DB/DataObject/FormBuilder/Frontend/ShowTable.php
-%{php_pear_dir}/Pearified/DB/DataObject/FormBuilder/Frontend/Search.php
-%{php_pear_dir}/Pearified/DB/DataObject/FormBuilder/Frontend.php
+#%{php_pear_dir}/.registry/*.reg
+%{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/AddRecord.php
+%{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/ChooseTable.php
+%{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/Controller.php
+%{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/DeleteRecords.php
+%{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/EditRecord.php
+%{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/LimitColumn.php
+%{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/ShowTable.php
+%{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/Search.php
+%{php_pear_dir}/DB/DataObject/FormBuilder/Frontend.php
