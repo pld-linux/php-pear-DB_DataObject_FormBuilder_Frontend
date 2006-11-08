@@ -7,7 +7,7 @@
 Summary:	%{_pearname} - A frontend for data editing, inserting, and deleting based on DB_DataObject_FormBuilder and Structures_DataGrid
 Name:		php-pear-%{_pearname}
 Version:	0.7.0
-Release:	0.5
+Release:	0.6
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pearified.com/get/%{_pearname}-%{version}.tgz
@@ -64,6 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %doc docs/%{_pearname}/docs/*
 #%{php_pear_dir}/.registry/*.reg
+%dir %{php_pear_dir}/DB/DataObject/FormBuilder/Frontend
 %{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/AddRecord.php
 %{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/ChooseTable.php
 %{php_pear_dir}/DB/DataObject/FormBuilder/Frontend/Controller.php
