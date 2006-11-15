@@ -4,7 +4,8 @@
 %define		_status		beta
 %define		_pearname	DB_DataObject_FormBuilder_Frontend
 %include    %{_sourcedir}/php-pear-build-macros
-Summary:	%{_pearname} - A frontend for data editing, inserting, and deleting based on DB_DataObject_FormBuilder and Structures_DataGrid
+Summary:	%{_pearname} - A frontend for data editing, inserting, and deleting
+Summary(pl):	%{_pearname} - frontend do modyfikowania, dodawania i usuwania danych
 Name:		php-pear-%{_pearname}
 Version:	0.7.0
 Release:	0.6
@@ -30,19 +31,12 @@ and DB_DataObject_FormBuilder.
 
 In PEAR status of this package is: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoReq:	no
-AutoProv:	no
+%description -l pl
+Ten pakiet udostêpnia dzia³aj±cy szkielet edytora danych DB z obs³ug±
+automatycznych odno¶ników io superrozszerzalno¶ci± poprzez klasy
+DB_DataObject i DB_DataObject_FormBuilder.
 
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl
-Testy dla PEAR::%{_pearname}.
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %pear_package_setup
