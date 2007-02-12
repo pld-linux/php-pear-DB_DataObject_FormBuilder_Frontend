@@ -5,7 +5,7 @@
 %define		_pearname	DB_DataObject_FormBuilder_Frontend
 %include    %{_sourcedir}/php-pear-build-macros
 Summary:	%{_pearname} - A frontend for data editing, inserting, and deleting
-Summary(pl.UTF-8):   %{_pearname} - frontend do modyfikowania, dodawania i usuwania danych
+Summary(pl.UTF-8):	%{_pearname} - frontend do modyfikowania, dodawania i usuwania danych
 Name:		php-pear-%{_pearname}
 Version:	0.7.0
 Release:	0.6
