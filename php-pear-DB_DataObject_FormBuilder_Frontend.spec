@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 %define		_class		DB
 %define		_subclass	DataObject_FormBuilder_Frontend
 %define		_status		beta
